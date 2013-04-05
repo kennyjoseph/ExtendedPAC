@@ -64,11 +64,7 @@ void PaCGenerator::run(){
 		if(!(min % Globals::MINUTES_IN_DAY) ){
 			day++;
 			int dayOfWeek = day % 7;
-			//if(dayOfWeek == 4 || dayOfWeek == 5){
-			//	resetFactor = Globals::RESET_FACTOR*2;
-			//} else { 
-			//	resetFactor = Globals::RESET_FACTOR;
-			//}
+	
 			vector<Agent*> toReset;
 			for(vector<Agent>::iterator it = agentVector->agents.begin(); it != agentVector->agents.end();it++){
 				if((double)rand()/RAND_MAX < it->probOfReset){
@@ -80,11 +76,9 @@ void PaCGenerator::run(){
 			}
 			cout << "DAY: " << day << endl;
 			cout << "Number of Interactions logged: " << Log::getInstance()->numInteractions << endl;
-			//Log::getInstance()->writeNumInteractions();
-			//Log::getInstance()->printAgentAttributes(agentVector->agents, day);
+			
 		}
 
-		//( (min %Globals::MINUTES_IN_DAY) >= nightVal) ? min+=nightSpeedup: min+=1;	
 	}
 
 	cout << "DAY: " << ++day << endl;

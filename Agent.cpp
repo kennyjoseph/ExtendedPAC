@@ -206,19 +206,6 @@ Agent::updateNeighbors(double payoff, vector<Agent*> agents){
 		updateNeighbor(payoff,agents[i],false);
 	}
 
-	//rememberedPayoffs.push_back(make_pair(agents.size(),payoff));
-	//payoff /= agents.size();
-	////cout << "Friendliness: " << friendliness <<"\n\t";
-	//avgPayoff = 0.;
-	//if(rememberedPayoffs.size() > 1){
-	//for(int i = 0; i < rememberedPayoffs.size()-1;i++){
-	//	//cout << "(" << rememberedPayoffs[i].first << ", " << rememberedPayoffs[i].second << "), ";
-	//	avgPayoff+=rememberedPayoffs[i].second;
-	//}
-	//avgPayoff /= rememberedPayoffs.size()-1;
-	//}
-	////cout << "\n\t AVG: " << avgPayoff<<endl;
-
 }
 void 
 Agent::updateNeighbor(double payoff, Agent*friendAgent, bool singleUpdate){
@@ -241,21 +228,6 @@ Agent::updateNeighbor(double payoff, Agent*friendAgent, bool singleUpdate){
 	}
 
 	capitalInWaiting += payoff;
-
-	//if(singleUpdate){
-	//	rememberedPayoffs.push_back(make_pair(1,payoff));
-	//	//cout << "Friendliness: " << friendliness <<"\n\t";
-
-	//	avgPayoff = 0;
-	//	if(rememberedPayoffs.size() > 1){
-	//		for(int i = 0; i < rememberedPayoffs.size()-1;i++){
-	//			//cout << "(" << rememberedPayoffs[i].first << ", " << rememberedPayoffs[i].second << "), ";		
-	//			avgPayoff+=rememberedPayoffs[i].second;
-	//		}
-	//		avgPayoff /= rememberedPayoffs.size()-1;
-	//	}
-	//	//cout << "\n\t AVG: " << avgPayoff<<endl;
-	//}
 
 	if(oldPayoff == payoff && !newNeighbor){
 		return;

@@ -132,11 +132,3 @@ InteractionFactory::getInteraction(Agent* sender, int minute,shared_ptr<Interact
 	return shared_ptr<Interaction>(new SMS(sender,thisInteractionReceivers,minute,importance,bounces));//sender->getExpectedPayoff(thisInteractionReceivers)));
 
 }
-
-
-//hash_map<int, Relationship*>::iterator it = sender->relationships.find(receivers[0]->id);
-		//double sendCount = (it == sender->relationships.end()) ? 0 : it->second->numSends;
-		//double totSends = sender->numP+sender->numE;
-		//double subtr = (totSends-sendCount <2) ? 1 : 1/log(totSends-sendCount);
-		//probPhone =  pow(probPhone,subtr);
-		//probPhone =  pow(probPhone,1/tieNumber);

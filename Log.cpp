@@ -75,14 +75,6 @@ Log::printAgentAttributes(vector<Agent>& agents, int day){
 	for(vector<Agent>::iterator it = agents.begin(); it != agents.end(); it++){
 		agentAttributesOut  << day << "," << it->id << "," << it->capital << "," << it->friendliness << "," <<
 			it->neighbors.size() << "," << it->interactionPQ.size()  << "," << it->avgPayoff << "," << it->expPayoffFromStrangers ;//<< ",";
-	/*	if(it->neighbors.size() != 0){
-			agentAttributesOut << it->relationships[it->neighbors.front()->id].lastPayoff  << "," <<
-			it->relationships[it->neighbors.front()->id].numInteractions  << "," <<
-			it->relationships[it->neighbors.front()->id].numSends << "," <<
-			it->relationships[it->neighbors.back()->id].lastPayoff  << "," <<
-			it->relationships[it->neighbors.back()->id].numInteractions << "," <<
-			it->relationships[it->neighbors.back()->id].numSends;
-		}*/
 		agentAttributesOut << "," << it->numP << "," << it->numE << "," << it->numPR << "," << it->numER << "," << it->totPhonePay << "," << it->totSMSPay << "," << it->timesRec << 
 			"," << it->probOfReset << "," << it->totPhonePay / (1+it->numP+it->numPR) << "," << it->totSMSPay/(1+it->numE+it->numER) << 
 			"," << it->totOut << "," << it->totIn << "," << it->totOut/(it->numE+1) << "," << it->totIn/(it->numER+1) << "," << it->asksForRec << "," << it->numReply << "," << it->numInit << endl;
