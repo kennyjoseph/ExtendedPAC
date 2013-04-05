@@ -1,3 +1,6 @@
+This work is licensed under the Creative Commons Attribution 3.0 Unported License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/.
+
 This code is used to simulate interactions between agents according to the model
 described in the article below
 
@@ -30,3 +33,4 @@ Future work:
 -Actually make it a command-line tool
 -Provide the analysis code (currently, it contains code from Nan Du that
 has not been explicitly released)
+
